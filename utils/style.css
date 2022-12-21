@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+ letter-spacing: 4px;
+ font-size: 50px;
+ font-style: italic;
+ padding: 30px;
+}
+
 .video_bg {
     position: relative;
     background-color: black;
-    height: 75vh;
+    height: 100vh;
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
@@ -25,16 +35,5 @@
   .video_bg .container {
     position: relative;
     z-index: 2;
-  }
-  
-  .video_bg .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 1;
   }
   

@@ -10,10 +10,11 @@
 
   <!-- The header content -->
   <div class="container h-100 priority">
-    <div class="d-flex h-100 text-center align-items-center">
+    <div class="d-flex h-100 text-center align-items-center flex-column">
       <div class="w-100 text-white">
     <img class="w-50 mt-5" src="https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltbcf2689c29fa39eb/622906a991f4232f0085d3cc/Masthead_Overwatch2_Logo.png" alt="">
       </div>
+      <h1>L'avenir mérite qu'on se batte pour lui </h1>
     </div>
   </div>
 </div>

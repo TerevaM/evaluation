@@ -40,7 +40,7 @@
             </div>
             <a href="#" class="nav-link collapse navbar-collapse" id="navbarColor01">
                 <img src="utils/pictures/user.png" style="width:35px" alt="Responsive image">
-            <p class="collapse navbar-collapse">Compte</p>    
+              
             </a>
                 
         </nav>
