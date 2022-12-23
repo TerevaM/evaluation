@@ -12,7 +12,7 @@
         <input name="type" type="text" class="form-control" value="<?= $map->getType()?>">
     </div>
       <input type="hidden" name="id_map" value="<?= $map->getId() ?>">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
 </div>
 <?php

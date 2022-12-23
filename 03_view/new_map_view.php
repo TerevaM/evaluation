@@ -11,7 +11,7 @@
         <label for="type" class="form-label text-white">Type</label>
         <input name="type" type="text" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
 </div>
 <?php

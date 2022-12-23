@@ -33,7 +33,7 @@
     <input name="passif" type="text" class="form-control" value="<?= $hero->getPassif() ?>">
   </div>
   <input type="hidden" name="id_hero" value="<?= $hero->getId() ?>">
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
 </div>
 </div>

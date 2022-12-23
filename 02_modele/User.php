@@ -6,14 +6,16 @@ class User {
     private $firstname;
     private $lastname;
     private $age;
-    private $date_of_birth;
+    private $email;
+    private $password;
     
-    public function __construct($id, $firstname, $lastname, $age, $date_of_birth) {
+    public function __construct($id, $firstname, $lastname, $age, $email, $password) {
         $this->id = $id;
         $this->firtname = $firstname;
         $this->lastname = $lastname;
         $this->age = $age;
-        $this->date_of_birth = $date_of_birth;
+        $this->email = $email;
+        $this->password = $password;
     }
 
     /**
@@ -96,22 +98,43 @@ class User {
         return $this;
     }
 
+
     /**
-     * Get the value of date_of_birth
+     * Get the value of password
      */ 
-    public function getDate_of_birth()
+    public function getPassword()
     {
-        return $this->date_of_birth;
+        return $this->password;
     }
 
     /**
-     * Set the value of date_of_birth
+     * Set the value of password
      *
      * @return  self
      */ 
-    public function setDate_of_birth($date_of_birth)
+    public function setPassword($password)
     {
-        $this->date_of_birth = $date_of_birth;
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of email
+     */ 
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set the value of email
+     *
+     * @return  self
+     */ 
+    public function setEmail($email)
+    {
+        $this->email = $email;
 
         return $this;
     }

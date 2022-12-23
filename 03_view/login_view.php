@@ -1,20 +1,56 @@
 <?php ob_start();
+
+var_dump($users);
 ?>
-<div class="container my-5 py-5 bg-primary">
-<form method="POST" action="<?= URL ?>login/connect" class="container p-5">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label text-white">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+<div class="container">
+  <div class="row d-flex flex-row">
+    <div class="col-sm-12">
+      <h1 class="px-5 text-white">Connect User</h1>
+      <div class="container my-5 py-5 bg-primary">
+        <form method="POST" action="<?= URL ?>login/connectvalid" class="container p-5">
+        <div class="mb-3">
+        <label for="email" class="form-label text-white">Email</label>
+        <input name="email" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+        <label for="password" class="form-label text-white">Password</label>
+        <input name="password" type="password" class="form-control">
+        </div>
+      <button type="submit" class="btn btn-secondary">Submit</button>
+      </form>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label text-white">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+  <div class="col-sm-12">
+    <h1 class="px-5 text-white">New User</h1>
+    <div class="container my-5 py-5 bg-primary">
+      <form method="POST" action="<?= URL ?>login/inscvalid" class="container p-5">
+        <div class="mb-3">
+        <label for="firstname" class="form-label text-white">Prenom</label>
+        <input name="firstname" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+        <label for="lastname" class="form-label text-white">Nom</label>
+        <input name="lastname" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+        <label for="sexe" class="form-label text-white">Sexe</label>
+        <input name="sexe" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+        <label for="email" class="form-label text-white">Email</label>
+        <input name="email" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+        <label for="password" class="form-label text-white">Password</label>
+        <input name="password" type="text" class="form-control">
+        </div>
+      <button type="submit" class="btn btn-secondary">Submit</button>
+      </form>
+      </div>
+    </div>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 </div>
 <?php
 $content = ob_get_clean();
 require_once "base_html.php";
-
 ?>

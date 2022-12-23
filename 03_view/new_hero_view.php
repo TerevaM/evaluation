@@ -35,7 +35,7 @@
     <label for="passif" class="form-label text-white">passif</label>
     <input name="passif" type="text" class="form-control">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
 </div>
 <?php

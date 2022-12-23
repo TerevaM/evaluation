@@ -22,12 +22,9 @@ class GameControler {
         $users = $this->userManager->getUsers();
         require_once "03_view/login_view.php";
     }
-    public function connectUser(){
-                $users = $this->userManager->getUsers();
-                var_dump($users);
-                echo "<br> STOP <br>";
-                var_dump($_POST);
-    }
+    // public function newUser() {
+
+    // }
 
     // ------------------ HEROES ---------------------- //
     public function displayHeroes() {
@@ -56,28 +53,34 @@ class GameControler {
     }
 
         // ------------------ MAPS ---------------------- //
-    public function displayMaps() {
-        $maps = $this->mapManager->getMaps();
-        require_once "03_view/maps_view.php";
-    }
-    public function newMapForm() {
-        require_once "03_view/new_map_view.php";
-    }
-    public function newMapValidation() {
-       $this->mapManager->newMapDB($_POST['name'], $_POST['type']);
-        header('Location: '. URL .'maps');
-    }
+        public function displayMaps() {
+            $maps = $this->mapManager->getMaps();
+            require_once "03_view/maps_view.php";
+        }
+        public function newMapForm() {
+            require_once "03_view/new_map_view.php";
+        }
+        public function newMapValidation() {
+            $this->mapManager->newMapDB($_POST['name'], $_POST['type']);
+            header('Location: '. URL .'maps');
+        }
     public function editMapForm($id) {
         $map = $this->mapManager->getMapById($id);
         require_once "03_view/edit_map_view.php";
     }
     public function editMapValidation() {
-    $this->mapManager->editMapDB($_POST['id_map'],$_POST['name'], $_POST['type']);
-            header('Location: '. URL .'maps');
+        $this->mapManager->editMapDB($_POST['id_map'],$_POST['name'], $_POST['type']);
+        header('Location: '. URL .'maps');
     }
-
+    
     public function deleteMap($id) {
         $this->mapManager->deleteMapDB($id);
         header("Location: ". URL ."maps");
     }
+    // ------------------ USERS ---------------------- //
+    public function newUserValidation() {
+        $this->userManager->newUserDB($_POST['firstname'], $_POST['lastname'], $_POST['sexe'], $_POST['email'], $_POST['password']);
+        header('Location:'. URL .'accueil');
+    }
+
 }

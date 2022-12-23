@@ -56,9 +56,12 @@ if (empty($_GET['page'])) {
             if(empty($url[1])){
                   $gameControler->displayUsers();
             }
-            else if($url[1] === "connect") {
-               var_dump($_POST);
+            else if($url[1] === "inscvalid") {
+               $gameControler->newUserValidation();
             }
+            // else if($url[1] === "connectvalid") {
+            //    $gameControler->connectUser();
+            // }
             ;
         break;
         case 'admin' : require_once "03_view/admin_view.php";
