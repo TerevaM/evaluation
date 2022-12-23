@@ -22,7 +22,6 @@
 
 <?php
 $content = ob_get_clean();
-$title="Home Game - X";
 require_once "base_html.php";
 
 ?>

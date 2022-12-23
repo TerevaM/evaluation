@@ -23,10 +23,13 @@ if (empty($_GET['page'])) {
                 $gameControler->newHeroValidation();
             }
             else if($url[1] === "edit"){
-
+                $gameControler->editHeroForm($url[2]);
+            }
+            else if($url[1] === "editvalid") {
+                $gameControler->editHeroValidation();
             }
             else if($url[1] === "delete"){
-
+                $gameControler->deleteHero($url[2]);
             }
             
         break;
@@ -36,7 +39,6 @@ if (empty($_GET['page'])) {
             }
             else if($url[1] === "connect") {
                var_dump($_POST);
-               echo "test";
             }
             ;
         break;

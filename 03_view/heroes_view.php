@@ -1,17 +1,26 @@
 <?php ob_start(); ?>
-<p>Héros</p>
-<div class="container my-5 py-5 bg-primary">
+<div class="container my-5 py-5 bg-secondary cards_heroes">
+    <div class="row d-flex justify-content-around ">
 <?php
-var_dump($heroes);
 foreach($heroes as $value) {
 ?>
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><?= $value->getName(); ?></h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="card col-4 m-1" style="width: 18rem; height:25rem">
+  <!-- <img src="..." class="card-img-top" alt="..."> -->
+  <div class="card-body position-relative">
+    <h3 class="card-title bg-primary p-2 text-center text-white"><?= $value->getName(); ?></h3>
+    <span class="text-uppercase">Category : <?= $value->getCategory(); ?></span><br>
+    <span>Attaque : <?= $value->getAttaque(); ?></span><br>
+    <span>Vie : <?= $value->getVie(); ?></span><br>
+    <span><p class="text-decoration-underline">1er competence</p> <?= $value->getFirst_cap(); ?></span> <br>
+    <span><p class="text-decoration-underline">2eme competence</p> <?= $value->getSecond_cap(); ?></span> 
+    <div class="d-flex justify-content-around position-absolute fixed-bottom py-2">
+        <a href="<?= URL ?>heros/edit/<?= $value->getId() ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i></a>
+        <form action="<?= URL ?>heros/delete/<?= $value->getId() ?>" method="POST"
+        onsubmit=" return confirm('Etes-vous certain de vouloir supprimer cet hero ?')">
+            <button class="btn btn-primary" type="submit"><i class="fa-solid fa-trash"></i></button>
+        </form>
+    </div>
   </div>
 </div>
 
@@ -19,14 +28,13 @@ foreach($heroes as $value) {
 <?php
 }
 ?>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">New Hero</h5>
+<div class="card col-4 m-1" style="width: 18rem;">
+  <div class="card-body d-flex justify-content-center align-items-center flex-column">
+    <h5 class="card-title bg-primary p-2 text-center text-white">New Hero</h5>
     <a class="btn btn-primary" href="<?= URL ?>heros/add">+</a>
   </div>
 </div>
-
+</div>
 </div>
 <?php
 $content = ob_get_clean();

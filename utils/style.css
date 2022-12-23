@@ -12,6 +12,11 @@ h1 {
   background-color: #15171e !important;
 }
 
+.priority {
+  position: relative;
+  z-index: 10;
+}
+
 .video_bg {
   position: relative;
   background-color: black;
@@ -34,15 +39,4 @@ h1 {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-}
-
-.video_bg .container {
-  position: relative;
-  z-index: 2;
-}
-
-.navbar {
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
 }
