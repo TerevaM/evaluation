@@ -22,13 +22,19 @@ foreach($maps as $value) {
 
 <?php
 }
+
+if(isset($_SESSION) && $_SESSION['rang'] == 'admin'):
 ?>
+
 <div class="card col-4 m-1" style="width: 18rem;">
   <div class="card-body d-flex justify-content-center align-items-center flex-column">
     <h5 class="card-title bg-primary p-2 text-center text-white">New Map</h5>
     <a class="btn btn-primary" href="<?= URL ?>maps/add">+</a>
   </div>
 </div>
+<?php 
+endif;
+?>
 </div>
 </div>
 <?php

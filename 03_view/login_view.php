@@ -1,6 +1,5 @@
 <?php ob_start();
 
-var_dump($users);
 ?>
 <div class="container">
   <div class="row d-flex flex-row">

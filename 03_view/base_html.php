@@ -1,3 +1,9 @@
+<?php
+session_start();
+var_dump($_SESSION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,11 +18,6 @@
 
 <body class="wallp">
     <header>
-        <?php if(!empty($_GET) && isset($_GET['disconnect']) && $_GET['disconnect'] == 1) {
-    session_destroy();
-      header('Location: ../../index.php');
-}
-?>
         <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
 
                 <button class="navbar-toggler pl-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +40,13 @@
                             <a class="nav-link" href="<?= URL?>maps">Maps</a>
                         </li>
                         <?php
+                        if(isset($_SESSION)) {
+                            ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= URL?>login/disconnected">Se deconnecter</a>
+                        </li>
+                            <?php
+                        }
                 if(isset($_SESSION['rank']) && $_SESSION['rank'] == 'admin') { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Page Admin</a>

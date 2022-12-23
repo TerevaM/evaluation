@@ -59,9 +59,10 @@ if (empty($_GET['page'])) {
             else if($url[1] === "inscvalid") {
                $gameControler->newUserValidation();
             }
-            // else if($url[1] === "connectvalid") {
-            //    $gameControler->connectUser();
-            // }
+            else if($url[1] === 'disconnected') {
+            session_destroy();
+            header('Location: '.URL.'accueil');
+            }
             ;
         break;
         case 'admin' : require_once "03_view/admin_view.php";

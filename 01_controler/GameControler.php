@@ -22,9 +22,14 @@ class GameControler {
         $users = $this->userManager->getUsers();
         require_once "03_view/login_view.php";
     }
-    // public function newUser() {
-
+    // public function disconnected() {
+    // session_destroy();
+    //   header('Location:' . URL . 'accueil');
     // }
+     public function newUserValidation() {
+        $this->userManager->newUserDB($_POST['firstname'], $_POST['lastname'], $_POST['sexe'], $_POST['email'], $_POST['password']);
+        header('Location:'. URL .'accueil');
+    }
 
     // ------------------ HEROES ---------------------- //
     public function displayHeroes() {
@@ -76,11 +81,6 @@ class GameControler {
     public function deleteMap($id) {
         $this->mapManager->deleteMapDB($id);
         header("Location: ". URL ."maps");
-    }
-    // ------------------ USERS ---------------------- //
-    public function newUserValidation() {
-        $this->userManager->newUserDB($_POST['firstname'], $_POST['lastname'], $_POST['sexe'], $_POST['email'], $_POST['password']);
-        header('Location:'. URL .'accueil');
     }
 
 }
