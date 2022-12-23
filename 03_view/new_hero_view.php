@@ -1,15 +1,19 @@
 <?php ob_start();
 ?>
-<h1 class="px-5">Nouveau héro</h1>
+<h1 class="px-5 text-white">Nouveau héro</h1>
 <div class="container my-5 py-5 bg-primary">
-<form method="POST" action="<?= URL ?>heros/gvalid" class="container p-5">
+<form method="POST" action="<?= URL ?>maps/gvalid" class="container p-5">
   <div class="mb-3">
     <label for="name" class="form-label text-white">Nom</label>
     <input name="name" type="text" class="form-control">
- </div>
-  <div class="mb-3">
-    <label for="category" class="form-label text-white">categorie</label>
-    <input name="category" type="text" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="category" class="form-label text-white">Category</label>
+<select name="category">
+    <option value="healer">Healer</option>
+    <option value="tank">Tank</option>
+    <option value="dps">Dps</option>
+</select>
   </div>
   <div class="mb-3">
     <label for="life" class="form-label text-white">life</label>

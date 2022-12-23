@@ -31,8 +31,27 @@ if (empty($_GET['page'])) {
             else if($url[1] === "delete"){
                 $gameControler->deleteHero($url[2]);
             }
-            
         break;
+        case 'maps' :
+            if(empty($url[1])) {
+                $gameControler->displayMaps();
+            }
+            else if($url[1] === "add"){
+                $gameControler->newMapForm();
+            }
+            else if($url[1] === "gvalid") {
+                $gameControler->newMapValidation();
+            }
+            else if($url[1] === "edit"){
+                $gameControler->editMapForm($url[2]);
+            }
+            else if($url[1] === "editvalid") {
+                $gameControler->editMapValidation();
+            }
+            else if($url[1] === "delete"){
+                $gameControler->deleteMap($url[2]);
+            }
+            break;
         case 'login' :
             if(empty($url[1])){
                   $gameControler->displayUsers();

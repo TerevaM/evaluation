@@ -35,6 +35,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?= URL?>heros">Héros</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= URL?>maps">Maps</a>
+                        </li>
                         <?php
                 if(isset($_SESSION['rank']) && $_SESSION['rank'] == 'admin') { ?>
                 <li class="nav-item">
