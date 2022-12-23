@@ -1,39 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 h1 {
-  font-family: 'Bebas Neue', cursive;
- letter-spacing: 4px;
- font-size: 50px;
- font-style: italic;
- padding: 30px;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 4px;
+  font-size: 50px;
+  font-style: italic;
+  padding: 30px;
+}
+
+.wallp {
+  background-color: #15171e !important;
 }
 
 .video_bg {
-    position: relative;
-    background-color: black;
-    height: 100vh;
-    min-height: 25rem;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .video_bg video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-  }
-  
-  .video_bg .container {
-    position: relative;
-    z-index: 2;
-  }
-  
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video_bg video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video_bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+}
